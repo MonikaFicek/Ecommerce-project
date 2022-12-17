@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 45.813 sec <<< FAILURE!
+submitOrder(Commerce.Test.SubmitOrderTest)  Time elapsed: 1.972 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at Commerce.PageObjects.ProductCatalogue.addProductToCart(ProductCatalogue.java:48)
+	at Commerce.Test.SubmitOrderTest.submitOrder(SubmitOrderTest.java:21)
+
+submitOrder(Commerce.Test.SubmitOrderTest)  Time elapsed: 10.62 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\monik\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61866}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61866/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c58d5366bab953868e3564284ef9bce5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at Commerce.AbstractComponents.AbstractComponent.waitForTheElementToAppear(AbstractComponent.java:31)
+	at Commerce.PageObjects.ProductCatalogue.getProductList(ProductCatalogue.java:33)
+	at Commerce.PageObjects.ProductCatalogue.getProductByName(ProductCatalogue.java:38)
+	at Commerce.PageObjects.ProductCatalogue.addProductToCart(ProductCatalogue.java:47)
+	at Commerce.Test.SubmitOrderTest.submitOrder(SubmitOrderTest.java:21)
+
